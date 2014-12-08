@@ -1387,7 +1387,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 3954508367
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 8cf9fc7bdf3db014398bbf940ff8ea37, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8ea6b52c87a7876489b1b4c716c06249, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &1165119036
 Transform:
@@ -1397,7 +1397,7 @@ Transform:
   m_GameObject: {fileID: 1165119034}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 70}
-  m_LocalScale: {x: 11.0824957, y: 11.2484818, z: 1}
+  m_LocalScale: {x: 10, y: 9.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -1519,7 +1519,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1263793400}
-        m_MethodName: Start
+        m_MethodName: StartGame
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1582,7 +1582,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1263793392}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee9e9924710b4d0478a2c326e30c43a1, type: 3}
+  m_Script: {fileID: 11500000, guid: fb7c9e6bb6b61fa44ab40125bed0ffc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1289855990
@@ -3792,7 +3792,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1936209893}
-        m_MethodName: Quit
+        m_MethodName: QuitGame
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3858,7 +3858,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1936209885}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4247e3ac34e22d9428f5187695a7885d, type: 3}
+  m_Script: {fileID: 11500000, guid: fb7c9e6bb6b61fa44ab40125bed0ffc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1990998238
