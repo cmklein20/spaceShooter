@@ -67,6 +67,8 @@
      <Compile Include="Assets\Detonator Explosion Framework\TestScene\TouchToMouse.cs" />
      <Compile Include="Assets\MainMenu\Menu.cs" />
      <Compile Include="Assets\MainMenu\MenuManager.cs" />
+     <Compile Include="Assets\MainMenu\QuitGame.cs" />
+     <Compile Include="Assets\MainMenu\StartGame.cs" />
      <Compile Include="Assets\PlanetRotate.cs" />
      <Compile Include="Assets\RotatingAsteroid.cs" />
      <Compile Include="Assets\Shooter.cs" />
