@@ -6,6 +6,7 @@ public class RotatingAsteroid : MonoBehaviour {
 	public GameObject explosion;
 	public GameObject spaceShip;
 	// Use this for initialization
+
 	void Start () {
 
 		spaceShip = GameObject.Find("Main Camera");
@@ -23,7 +24,7 @@ public class RotatingAsteroid : MonoBehaviour {
 		Instantiate(explosion, transform.position, Quaternion.identity);
 		Destroy(this.gameObject);
 
-		Debug.Log("Collision " + (transform.position - spaceShip.transform.position).magnitude);
+//		Debug.Log("Collision " + (transform.position - spaceShip.transform.position).magnitude);
 	}
 
 }

@@ -110,7 +110,7 @@ public class SpaceshipMovement : MonoBehaviour
 		
 		
 		//this takes care of realigning after collisions, where the ship gets displaced due to its rigidbody.
-		//I'm pretty sure this is the best way to do it (have the ship and the rig move toward their mutual center)
+		//I'm pretty sure this is the best way to do it (have the ship and the rig move toward their mutual center)	
 		transform.GetChild(1).Translate(-offsetDir * sqrOffset * 20 * Time.fixedDeltaTime);
 		//(**************** this ***************) is what actually makes the whole ship move through the world!
 		transform.Translate((offsetDir * sqrOffset * 50 + transform.GetChild(1).forward * speed) * Time.fixedDeltaTime, Space.World);
