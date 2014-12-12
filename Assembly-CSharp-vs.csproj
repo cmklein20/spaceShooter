@@ -65,10 +65,12 @@
      <Compile Include="Assets\Detonator Explosion Framework\System\DetonatorSpray.cs" />
      <Compile Include="Assets\Detonator Explosion Framework\TestScene\DetonatorTest.cs" />
      <Compile Include="Assets\Detonator Explosion Framework\TestScene\TouchToMouse.cs" />
+     <Compile Include="Assets\LevelUIManager.cs" />
      <Compile Include="Assets\MainMenu\AudioManager.cs" />
      <Compile Include="Assets\MainMenu\GameManager.cs" />
      <Compile Include="Assets\MainMenu\Menu.cs" />
      <Compile Include="Assets\MainMenu\MenuManager.cs" />
+     <Compile Include="Assets\MainMenu\PauseMenu.cs" />
      <Compile Include="Assets\PlanetRotate.cs" />
      <Compile Include="Assets\RotatingAsteroid.cs" />
      <Compile Include="Assets\Shooter.cs" />
