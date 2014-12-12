@@ -37,6 +37,7 @@ public class SpaceshipMovement : MonoBehaviour
 		
 		//vertical stick adds to the pitch velocity
 		//         (*************************** this *******************************) is a nice way to get the square without losing the sign of the value
+//if (Input.location != null && Input.acceleration.x < 10) {
 		angVel.x += Input.GetAxis("Vertical") * Mathf.Abs(Input.GetAxis("Vertical")) * sensitivity * Time.fixedDeltaTime;
 		
 		//horizontal stick adds to the roll and yaw velocity... also thanks to the .5 you can't turn as fast/far sideways as you can pull up/down
@@ -68,7 +69,6 @@ public class SpaceshipMovement : MonoBehaviour
 		//this is what limits your angular velocity.  Basically hard limits it at some value due to the square magnitude, you can
 		//tweak where that value is based on the coefficient
 		angVel -= angVel.normalized * angVel.sqrMagnitude * .2f * Time.fixedDeltaTime;
-		
 		
 		//and finally rotate.  
 		transform.GetChild(1).Rotate(angVel * Time.fixedDeltaTime);
@@ -102,7 +102,8 @@ public class SpaceshipMovement : MonoBehaviour
 		
 		//moves camera (make sure you're GetChild()ing the camera's index)
 		//I don't mind directly connecting this to the speed of the ship, because that always changes smoothly
-		transform.GetChild(0).localPosition = cameraOffset + new Vector3(0, 0, -deltaSpeed * .02f);
+		if (-deltaSpeed * .02f < 1 && -deltaSpeed * .02f > -10) //if added by Nergal to trace camera. Still have problems sometimes.
+			transform.GetChild(0).localPosition = cameraOffset + new Vector3(0, 0, -deltaSpeed * .02f);
 		
 		
 		float sqrOffset = transform.GetChild(1).localPosition.sqrMagnitude;
@@ -111,14 +112,15 @@ public class SpaceshipMovement : MonoBehaviour
 		
 		//this takes care of realigning after collisions, where the ship gets displaced due to its rigidbody.
 		//I'm pretty sure this is the best way to do it (have the ship and the rig move toward their mutual center)	
-		transform.GetChild(1).Translate(-offsetDir * sqrOffset * 20 * Time.fixedDeltaTime);
-		//(**************** this ***************) is what actually makes the whole ship move through the world!
-		transform.Translate((offsetDir * sqrOffset * 50 + transform.GetChild(1).forward * speed) * Time.fixedDeltaTime, Space.World);
-		
-		//comment this out for starfox, remove the x and z components for shadows of the empire, and leave the whole thing for free roam
-		transform.Rotate(shipRot.x * Time.fixedDeltaTime, (shipRot.y * Mathf.Abs(shipRot.y) * .02f) * Time.fixedDeltaTime, shipRot.z * Time.fixedDeltaTime);
+		if (transform.GetChild(1).localPosition.x < 10) { //if added by Nergal to trace camera. Still have problems sometimes
+			transform.GetChild(1).Translate(-offsetDir * sqrOffset * 20 * Time.fixedDeltaTime);
+			//(**************** this ***************) is what actually makes the whole ship move through the world!
+			transform.Translate((offsetDir * sqrOffset * 50 + transform.GetChild(1).forward * speed) * Time.fixedDeltaTime, Space.World);
+			
+			//comment this out for starfox, remove the x and z components for shadows of the empire, and leave the whole thing for free roam
+			transform.Rotate(shipRot.x * Time.fixedDeltaTime, (shipRot.y * Mathf.Abs(shipRot.y) * .02f) * Time.fixedDeltaTime, shipRot.z * Time.fixedDeltaTime);
+		}
 	}
-	
 	void Update()
 	{
 	}
