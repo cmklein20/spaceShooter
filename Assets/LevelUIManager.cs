@@ -82,31 +82,33 @@ public class LevelUIManager : MonoBehaviour
 	public void HandleFuelBar ()
 	{
 		fuelText.text = "Fuel: " + currentFuel;
-		currentXValue = Map (currentFuel, 0, maxFuel, minXValue, maxXValue);
+		Debug.Log ("Current fuel: " + currentFuel);
+		currentXValue = MapValues (currentFuel, 0, maxFuel, minXValue, maxXValue);
+		Debug.Log ("Current x value: " + currentXValue);
 		fuelTransform.position = new Vector3 (currentXValue, cachedY);
 
 		if (currentFuel > maxFuel / 2)
 		{
-			visualFuel.color = new Color32((byte)Map(currentFuel, maxFuel / 2, maxFuel, 255, 0), 255, 0, 255);
+			visualFuel.color = new Color32((byte)MapValues(currentFuel, maxFuel / 2, maxFuel, 255, 0), 255, 0, 255);
 		}
 		else
 		{
-			visualFuel.color = new Color32(255, (byte)Map(currentFuel, 0, maxFuel / 2, 0, 255), 0, 255);
+			visualFuel.color = new Color32(255, (byte)MapValues(currentFuel, 0, maxFuel / 2, 0, 255), 0, 255);
 		}
 	}
 
 	public void FuelTimer ()
 	{
-		if (!onCD && currentFuel > 1)
+		if (!onCD && currentFuel > 0)
 		{
 			StartCoroutine(CoolDownDamage());
 			Fuel -= 1;
 		}
 	}
 	
-	public float Map(float x, float in_min, float in_max, float out_min, float out_max)
+	public float MapValues(float x, float inMin, float inMax, float outMin, float outMax)
 	{
-		return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
+		return (x - inMin) * (outMax - outMin) / (inMax - inMin) + outMin;
 	}
 
 	IEnumerator CoolDownDamage ()
