@@ -2,7 +2,9 @@ fileFormatVersion: 2
 guid: 824ea5cd21d875344ad0b778cdb6461f
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - spaceship: {instanceID: 0}
+  - asteroid: {fileID: 100000, guid: cfba47bbf310c084283204e4346214f0, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

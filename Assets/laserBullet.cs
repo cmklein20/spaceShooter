@@ -1,19 +1,25 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class laserBullet : MonoBehaviour {
+public class laserBullet : MonoBehaviour 
+{
+	private GameObject levelGUI;
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+	void Awake ()
+	{
+		if (levelGUI == null)
+		{
+			levelGUI = GameObject.FindGameObjectWithTag("LevelGUI");
+		}
 	}
 
-	void OnCollisionEnter(Collision col){
+	void OnCollisionEnter(Collision col)
+	{
+		if (col.gameObject.tag == "FuelRefill")
+		{
+			levelGUI.SendMessage ("RefillFuel");
+		}
+		levelGUI.SendMessage ("UpdateScore");
 		Destroy(gameObject);
 	}
 }
