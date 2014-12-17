@@ -21,5 +21,6 @@ public class laserBullet : MonoBehaviour
 		}
 		levelGUI.SendMessage ("UpdateScore");
 		Destroy(gameObject);
+		Destroy (col.gameObject);
 	}
 }

@@ -742,7 +742,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22400008, guid: 340114d78d6add644b828d395d370752, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 22400008, guid: 340114d78d6add644b828d395d370752, type: 2}
       propertyPath: m_AnchoredPosition.x
@@ -1089,7 +1089,7 @@ Transform:
   m_LocalScale: {x: 1.25684011, y: 1.29990995, z: 1.1810236}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!114 &345054808
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1746,7 +1746,6 @@ MonoBehaviour:
   m_Script: {fileID: 1301386320, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Priority: 3
   ignoreReversedGraphics: 1
   blockingObjects: 0
   m_BlockingMask:
@@ -1900,7 +1899,7 @@ Transform:
   m_LocalScale: {x: 500, y: 500, z: 500}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
 --- !u!114 &707117605
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2331,6 +2330,7 @@ MonoBehaviour:
   density: 10
   spaceship: {fileID: 1008566390}
   asteroid: {fileID: 100000, guid: cfba47bbf310c084283204e4346214f0, type: 2}
+  fuelroid: {fileID: 188772, guid: 5d3094d6c7ed07744944be1a3bfed000, type: 2}
 --- !u!45 &1008566398
 Skybox:
   m_ObjectHideFlags: 0
@@ -3405,7 +3405,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cfba47bbf310c084283204e4346214f0, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: cfba47bbf310c084283204e4346214f0, type: 2}
       propertyPath: spaceShip
