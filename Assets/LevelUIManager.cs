@@ -27,6 +27,7 @@ public class LevelUIManager : MonoBehaviour
 	private int lastLevel;
 	private string winGame;
 	private string loseGame;
+	public int fuelDecreaser;
 
 
 	// Use this for initialization
@@ -103,7 +104,7 @@ public class LevelUIManager : MonoBehaviour
 
 		set
 		{
-			currentFuel = value;
+			currentFuel = value - fuelDecreaser;
 			HandleFuelBar ();
 		}
 	}

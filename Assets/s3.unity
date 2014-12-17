@@ -583,7 +583,7 @@ MonoBehaviour:
   visualFuel: {fileID: 551308946}
   coolDown: 1
   displayLevel: {fileID: 1489451023}
-  fuelDecreaser: 0
+  fuelDecreaser: 1
 --- !u!1 &223867168
 GameObject:
   m_ObjectHideFlags: 0
@@ -4762,7 +4762,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400030, guid: 340114d78d6add644b828d395d370752, type: 2}
       propertyPath: fuelDecreaser
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 340114d78d6add644b828d395d370752, type: 2}
