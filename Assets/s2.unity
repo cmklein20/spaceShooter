@@ -19,7 +19,7 @@ RenderSettings:
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
   m_AmbientLight: {r: .200000003, g: .200000003, b: .200000003, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: f9d46c088be429846b76099bac0e4dc0, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 17d22e5202443ab4a9c5f97c933ba51d, type: 2}
   m_HaloStrength: .5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -614,7 +614,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 223867168}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: .954595089, z: 0}
+  m_LocalPosition: {x: 0, y: 13.5699997, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1008566395}
@@ -652,7 +652,7 @@ GameObject:
   - 54: {fileID: 240246740}
   m_Layer: 0
   m_Name: Planet4
-  m_TagString: Untagged
+  m_TagString: Planet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -869,7 +869,7 @@ GameObject:
   - 54: {fileID: 288944583}
   m_Layer: 0
   m_Name: Planet3
-  m_TagString: Untagged
+  m_TagString: Planet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1852,7 +1852,7 @@ GameObject:
   - 54: {fileID: 707117606}
   m_Layer: 0
   m_Name: Planet1
-  m_TagString: Untagged
+  m_TagString: Planet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2193,11 +2193,11 @@ GameObject:
   - 20: {fileID: 1008566394}
   - 92: {fileID: 1008566393}
   - 81: {fileID: 1008566391}
-  - 114: {fileID: 1008566397}
   - 45: {fileID: 1008566398}
   - 82: {fileID: 1008566392}
   - 114: {fileID: 1008566396}
   - 54: {fileID: 1008566399}
+  - 114: {fileID: 1008566397}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2332,7 +2332,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c21785a51f4c8444a49299ac2accf85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  density: 10
+  density: 5
   spaceship: {fileID: 1008566390}
   meteorite: {fileID: 100000, guid: d8b6009124fafdb418857901cb24b922, type: 2}
 --- !u!114 &1008566397
@@ -2343,17 +2343,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1008566390}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71a44d0e00accb543a647ca6e6924787, type: 3}
+  m_Script: {fileID: 11500000, guid: 824ea5cd21d875344ad0b778cdb6461f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  density: 10
+  density: 3
   spaceship: {fileID: 1008566390}
-  galaxy: {fileID: 100000, guid: d8b6009124fafdb418857901cb24b922, type: 2}
-  a: {fileID: 0}
-  xDif: 0
-  yDif: 0
-  Playerdirection: {x: 0, y: 0}
-  speed: 2
+  asteroid: {fileID: 100000, guid: cfba47bbf310c084283204e4346214f0, type: 2}
+  fuelroid: {fileID: 188772, guid: 5d3094d6c7ed07744944be1a3bfed000, type: 2}
 --- !u!45 &1008566398
 Skybox:
   m_ObjectHideFlags: 0
@@ -2914,7 +2910,7 @@ Transform:
   m_PrefabInternal: {fileID: 973892079}
   m_GameObject: {fileID: 1234169437}
   m_LocalRotation: {x: -.707106888, y: 0, z: -0, w: .707106769}
-  m_LocalPosition: {x: -.238930613, y: .554291487, z: 13.1837606}
+  m_LocalPosition: {x: -.200000003, y: 4.5, z: 67.5}
   m_LocalScale: {x: 1.25684011, y: 1.29990995, z: 1.1810236}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3127,7 +3123,6 @@ MonoBehaviour:
   m_Script: {fileID: 1301386320, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Priority: 3
   ignoreReversedGraphics: 1
   blockingObjects: 0
   m_BlockingMask:
@@ -3721,7 +3716,7 @@ GameObject:
   - 54: {fileID: 1690683834}
   m_Layer: 0
   m_Name: Planet2
-  m_TagString: Untagged
+  m_TagString: Planet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

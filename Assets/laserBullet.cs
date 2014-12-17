@@ -18,9 +18,14 @@ public class laserBullet : MonoBehaviour
 		if (col.gameObject.tag == "FuelRefill")
 		{
 			levelGUI.SendMessage ("RefillFuel");
+			Destroy(gameObject);
+			Destroy (col.gameObject);
+		}else if(col.gameObject.tag == "Planet"){
+			Destroy(gameObject);
+		}else{
+			levelGUI.SendMessage ("UpdateScore");
+			Destroy(gameObject);
+			Destroy (col.gameObject);
 		}
-		levelGUI.SendMessage ("UpdateScore");
-		Destroy(gameObject);
-		Destroy (col.gameObject);
 	}
 }

@@ -18,6 +18,7 @@ public class GalaxyGenerator : MonoBehaviour {
 		float dt = Time.time - lastTime;
 		if (Random.value < density * dt) {
 			if (galaxy != null) {
+
 				a = (Instantiate(galaxy) as GameObject).GetComponent<Rigidbody>();
 				if (GameObject.FindGameObjectWithTag("MainCamera").rigidbody.position.x < 100) {
 					xDif = spaceship.rigidbody.position.x - transform.position.x;
