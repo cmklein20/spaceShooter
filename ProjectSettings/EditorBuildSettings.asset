@@ -12,6 +12,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/s2.unity
   - enabled: 1
+    path: Assets/s3.unity
+  - enabled: 1
     path: Assets/WinGame.unity
   - enabled: 1
     path: Assets/LoseGame.unity

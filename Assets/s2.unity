@@ -596,7 +596,7 @@ GameObject:
   - 114: {fileID: 223867173}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: SpaceShip
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1206,7 +1206,7 @@ GameObject:
   - 114: {fileID: 382904773}
   m_Layer: 0
   m_Name: hextraction_pod
-  m_TagString: Untagged
+  m_TagString: SpaceShip
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2350,7 +2350,11 @@ MonoBehaviour:
   density: 3
   spaceship: {fileID: 1008566390}
   asteroid: {fileID: 100000, guid: cfba47bbf310c084283204e4346214f0, type: 2}
+  asteroid2: {fileID: 110534, guid: 977b988f89f1fa24abb2ea8f22afb161, type: 2}
+  asteroid3: {fileID: 142140, guid: 153d7720961ea6541a9ab9882214fe24, type: 2}
   fuelroid: {fileID: 188772, guid: 5d3094d6c7ed07744944be1a3bfed000, type: 2}
+  refuelAvailable: 1
+  multipleAsteroids: 1
 --- !u!45 &1008566398
 Skybox:
   m_ObjectHideFlags: 0

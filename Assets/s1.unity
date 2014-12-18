@@ -539,7 +539,7 @@ GameObject:
   - 114: {fileID: 223867173}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: SpaceShip
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1227,7 +1227,7 @@ GameObject:
   - 114: {fileID: 382904773}
   m_Layer: 0
   m_Name: hextraction_pod
-  m_TagString: Untagged
+  m_TagString: SpaceShip
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1987,6 +1987,7 @@ MonoBehaviour:
   visualFuel: {fileID: 1358893453}
   coolDown: 1
   displayLevel: {fileID: 1129660979}
+  fuelDecreaser: 0
 --- !u!1 &781351393
 GameObject:
   m_ObjectHideFlags: 0

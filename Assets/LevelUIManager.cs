@@ -197,4 +197,9 @@ public class LevelUIManager : MonoBehaviour
 	{
 		Application.LoadLevel ("MainMenu");
 	}
+
+	public void GameOver()
+	{
+		Application.LoadLevel ("LoseGame");
+	}
 }
